@@ -8,26 +8,34 @@ namespace Business.Constants
 {
     public static class Messages
     {
-        public static string CarAdded = "Araba eklendi";
-        public static string CarDeleted = "Araba silindi";
-        public static string CarUpdated = "Araba güncellendi";
+        public static string CarAdded = "Araba başarıyla eklendi";
+        public static string CarDeleted = "Araba başarıyla  silindi";
+        public static string CarUpdated = "Araba başarıyla güncellendi";
         public static string CarNameInvalid = "Araba isim formatına uymuyor";
         public static string CarPriceInvalid = "Araba fiyat formatına uymuyor!";
         public static string CarPriceAndNameInvalid = "Araba isim ve fiyat formatına uymuyor!";
-        public static string CarsListed = "Arabalar listelendi";
-        public static string CarListedById = "Id ye göre araba getirildi";
         public static string CarsListedWithDetails = "Arabalar detaylarıyla listelendi";
 
-        public static string BrandAdded = "Marka eklendi";
-        public static string BrandDeleted = "Marka silindi";
-        public static string BrandsListed = "Markalar listelendi";
-        public static string BrandListedById = "Id ye göre marka getirildi";
-        public static string BrandUpdated = "Araba güncellendi";
+        public static string BrandAdded = "Marka başarıyla eklendi";
+        public static string BrandDeleted = "Marka başarıyla silindi";
+        public static string BrandUpdated = "Araba başarıyla güncellendi";
 
-        public static string ColorAdded = "Renk eklendi";
-        public static string ColorDeleted = "Renk silindi";
-        public static string ColorUpdated = "Renk güncellendi";
-        public static string ColorsListed = "Renkler listelendi";
-        public static string ColorListedById = "Id ye göre renk getirildi";
+        public static string ColorAdded = "Renk başarıyla  eklendi";
+        public static string ColorDeleted = "Renk başarıyla  silindi";
+        public static string ColorUpdated = "Renk başarıyla güncellendi";
+       
+
+        public static string RentalAdded = "Kiralama işlemi başarıyla eklendi";
+        public static string RentalDeleted = "Kiralama işlemi başarıyla silindi";
+        public static string RentalUpdated = "Kiralama işlemi başarıyla güncellendi";
+        public static string RentalAddingFailed = "Araba şu anda kiralanamaz";
+
+        public static string UserAdded = "Kullanıcı başarıyla eklendi.";
+        public static string UserUpdated = "Kullanıcı başarıyla güncellendi.";
+        public static string UserDeleted = "Kullanıcı başarıyla silindi.";
+
+        public static string CustomerAdded = "Müşteri başarıyla eklendi.";
+        public static string CustomerUpdated = "Müşteri başarıyla güncellendi.";
+        public static string CustomerDeleted = "Müşteri başarıyla silindi.";
     }
 }

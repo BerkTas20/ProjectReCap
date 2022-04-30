@@ -1,5 +1,7 @@
 ﻿using Business.Abstract;
 using Business.Constants;
+using Business.ValidationRules;
+using Core.Aspect.Autofac;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
@@ -19,6 +21,7 @@ namespace Business.Concrete
             _brandDal = brandDal;
         }
 
+        [ValidationAspect(typeof(BrandValidator))]
         public IResult Add(Brand brand)
         {
             _brandDal.Add(brand);
@@ -33,7 +36,7 @@ namespace Business.Concrete
 
         public IDataResult<List<Brand>> GetAll()
         {
-            return new SuccessDataResult<List<Brand>>(_brandDal.GetAll(), Messages.BrandsListed);
+            return new SuccessDataResult<List<Brand>>(_brandDal.GetAll());
             //ikinci yöntem
             //var result = _brandDal.GetAll();
             //return new SuccessDataResult<List<Brand>>(result, Messages.Listed);
@@ -41,8 +44,10 @@ namespace Business.Concrete
 
         public IDataResult<Brand> GetById(int brandId)
         {
-            return new SuccessDataResult<Brand>(_brandDal.Get(b => b.BrandId == brandId),Messages.BrandListedById);
+            return new SuccessDataResult<Brand>(_brandDal.Get(b => b.BrandId == brandId));
         }
+
+        [ValidationAspect(typeof(BrandValidator))]
 
         public IResult Update(Brand brand)
         {
