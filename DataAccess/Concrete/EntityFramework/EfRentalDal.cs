@@ -10,11 +10,11 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Concrete.EntityFramework
 {
-    public class EfRentalDal:EfEntityRepositoryBase<Rental,ReCapProjectContext>,IRentalDal
+    public class EfRentalDal:EfEntityRepositoryBase<Rental,RentACarContext>,IRentalDal
     {
         public List<RentalDetailDto> GetRentalDetails()
         {
-            using (ReCapProjectContext context = new ReCapProjectContext())
+            using (RentACarContext context = new RentACarContext())
             {
                 var result = from rental in context.Rentals
                              join car in context.Cars
@@ -24,7 +24,7 @@ namespace DataAccess.Concrete.EntityFramework
                              join customer in context.Customers
                              on rental.CustomerId equals customer.CustomerId
                              join user in context.Users
-                             on customer.UserId equals us.UserId
+                             on customer.UserId equals user.UserId
                              select new RentalDetailDto
                              {
                                  RentalId = rental.RentalId,

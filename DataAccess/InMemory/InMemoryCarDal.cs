@@ -55,7 +55,7 @@ namespace DataAccess.Concrete
             return selectedCar;
         }
 
-        public List<CarDetailDTO> GetCarDetails()
+        public List<CarDetailDto> GetCarDetails()
         {
             throw new NotImplementedException();
         }
@@ -71,6 +71,9 @@ namespace DataAccess.Concrete
 
         }
 
-      
+        List<CarDetailDto> ICarDal.GetCarDetails()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

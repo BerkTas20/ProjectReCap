@@ -1,20 +1,56 @@
-﻿using Entities.Concrete;
+﻿using Business.Abstract;
+using Business.Concrete;
+using DataAccess.Concrete.EntityFramework;
+using Entities.Concrete;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class CarsController : Controller
+    public class CarsController : ControllerBase
     {
-        [HttpGet]
-        public List<Car>Get()
+        ICarService _carService;
+
+        public CarsController(ICarService carService)
         {
-            return new List<Car>
+            _carService = carService;
+        }
+
+        [HttpGet("getall")]
+        public IActionResult GetAll()
+        {
+            var result = _carService.GetAll();
+            if (result.Success)
             {
-                new Car{CarId = 1,CarName ="BMW"},
-                new Car{CarId = 2,CarName ="Mercedes"},
-            };
+                return Ok(result);
+            }
+            return BadRequest(result);
+            
+        }
+
+        [HttpGet("getbyid")]
+        public IActionResult GetById(int carId)
+        {
+            var result = _carService.GetById(carId);
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result);
+        }
+
+
+
+        [HttpPost("add")]
+        public IActionResult Add(Car car)
+        {
+            var result = _carService.Add(car);
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result);
         }
     }
 }

@@ -15,6 +15,7 @@ namespace Business.Constants
         public static string CarPriceInvalid = "Araba fiyat formatına uymuyor!";
         public static string CarPriceAndNameInvalid = "Araba isim ve fiyat formatına uymuyor!";
         public static string CarsListedWithDetails = "Arabalar detaylarıyla listelendi";
+        public static string CarsListed = "Arabalar listelendi";
 
         public static string BrandAdded = "Marka başarıyla eklendi";
         public static string BrandDeleted = "Marka başarıyla silindi";
