@@ -16,6 +16,9 @@ namespace Business.Constants
         public static string CarPriceAndNameInvalid = "Araba isim ve fiyat formatına uymuyor!";
         public static string CarsListedWithDetails = "Arabalar detaylarıyla listelendi";
         public static string CarsListed = "Arabalar listelendi";
+        public const string ThisCarHasNotBeenReturnedYet = "Bu araba henüz teslim edilmedi";
+        public const string TheImageLimitForThisCarHasBeenExceeded = "Bu araba için daha fazla resim ekleyemezsin";
+
 
         public static string BrandAdded = "Marka başarıyla eklendi";
         public static string BrandDeleted = "Marka başarıyla silindi";
@@ -38,5 +41,7 @@ namespace Business.Constants
         public static string CustomerAdded = "Müşteri başarıyla eklendi.";
         public static string CustomerUpdated = "Müşteri başarıyla güncellendi.";
         public static string CustomerDeleted = "Müşteri başarıyla silindi.";
+
+
     }
 }
