@@ -19,5 +19,12 @@ namespace Business.Abstract
         IResult Update(Car car);
         IResult Delete(Car car);
         IDataResult<List<CarDetailDto>> GetCarDetails();
+        IResult AddTransactionalTest(Car car);
+        //Uygulamada tutarlılığı korumak için.
+        //Örneğin ; benim hesabımda 100 lira para var.Keremin hesabına 10 tl aktaracağım.
+        //bu benim hesabımın 10 tl düşecek şekilde update edilmesi anlamına geliyor.
+        //keremin de hesabının 10 lira artacak şekilde update edilmesi gerekiyor.
+        //Yani iki tane veritabanı işlemi var.Benim hesabım güncellenirken keremin hesabı hata verdi.
+        //işlemin bu sefer geri alınması gerekiyor.
     }
 }

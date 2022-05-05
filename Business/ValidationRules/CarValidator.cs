@@ -14,6 +14,8 @@ namespace Business.ValidationRules
         {
             RuleFor(c=>c.CarName).MinimumLength(2).NotEmpty();
             RuleFor(c=>c.DailyPrice).GreaterThan(0).NotEmpty();
+            RuleFor(c => c.DailyPrice).NotEmpty();
+            RuleFor(c => c.Description).NotEmpty();
         }
     }
 }

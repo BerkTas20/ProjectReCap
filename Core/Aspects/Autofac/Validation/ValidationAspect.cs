@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Core.Aspect.Autofac
+namespace Core.Aspect.Autofac.Validation
 {
     public class ValidationAspect : MethodInterception
     {
