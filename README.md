@@ -2,6 +2,7 @@
 - Layered  Architecture Backend
 - .NET CORE 6
 - Entity Framework 
+- MSSQL
 - Generic Repository Pattern 
 - RESTful API
 - OOP, AOP, SOLID
